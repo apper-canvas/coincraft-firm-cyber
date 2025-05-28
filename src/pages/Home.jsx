@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+
 import MainFeature from '../components/MainFeature'
 import ApperIcon from '../components/ApperIcon'
 
@@ -37,10 +39,13 @@ const Home = () => {
             
             <div className="flex items-center space-x-4">
               <nav className="hidden md:flex space-x-6">
-                <a href="#dashboard" className="text-surface-600 hover:text-primary-600 font-medium transition-colors">Dashboard</a>
+                <Link to="/" className="text-surface-600 hover:text-primary-600 font-medium transition-colors">Dashboard</Link>
+                <Link to="/portfolio" className="text-surface-600 hover:text-primary-600 font-medium transition-colors">Portfolio</Link>
                 <a href="#analytics" className="text-surface-600 hover:text-primary-600 font-medium transition-colors">Analytics</a>
                 <a href="#goals" className="text-surface-600 hover:text-primary-600 font-medium transition-colors">Goals</a>
               </nav>
+
+
               
               <button
                 onClick={toggleDarkMode}
@@ -48,7 +53,6 @@ const Home = () => {
               >
                 <ApperIcon name={darkMode ? 'Sun' : 'Moon'} className="w-5 h-5 text-surface-600" />
               </button>
-            </div>
           </div>
         </div>
       </motion.header>
