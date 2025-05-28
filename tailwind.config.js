@@ -29,6 +29,10 @@ export default {
           700: '#334155',
           800: '#1e293b',
           900: '#0f172a'
+        },
+        border: {
+          DEFAULT: '#e2e8f0'
+
         }
       },
       fontFamily: {
