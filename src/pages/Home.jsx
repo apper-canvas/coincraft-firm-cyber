@@ -53,6 +53,8 @@ const Home = () => {
               >
                 <ApperIcon name={darkMode ? 'Sun' : 'Moon'} className="w-5 h-5 text-surface-600" />
               </button>
+            </div>
+
           </div>
         </div>
       </motion.header>
