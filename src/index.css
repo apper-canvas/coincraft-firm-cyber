@@ -43,13 +43,15 @@
   }
   
   .btn-primary {
-    @apply bg-black text-black px-6 py-3 rounded-xl font-medium shadow-card hover:shadow-soft hover:bg-gray-800 transition-all duration-200 focus:ring-4 focus:ring-gray-300;
+    @apply bg-blue-600 text-white px-6 py-3 rounded-xl font-medium shadow-card hover:shadow-soft hover:bg-blue-700 transition-all duration-200 focus:ring-4 focus:ring-blue-300;
   }
+
 
   
   .btn-secondary {
-    @apply bg-black text-black px-6 py-3 rounded-xl font-medium shadow-card hover:shadow-soft hover:bg-gray-800 transition-all duration-200 focus:ring-4 focus:ring-gray-300;
+    @apply bg-blue-600 text-white px-6 py-3 rounded-xl font-medium shadow-card hover:shadow-soft hover:bg-blue-700 transition-all duration-200 focus:ring-4 focus:ring-blue-300;
   }
+
 
   
   .investment-card {

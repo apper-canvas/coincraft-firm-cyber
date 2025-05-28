@@ -39,9 +39,10 @@ const MainFeature = () => {
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center space-x-2 px-4 sm:px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                 activeTab === tab.id
-                  ? 'bg-black text-black shadow-card'
-                  : 'text-surface-600 hover:text-black hover:bg-surface-50'
+                  ? 'bg-blue-600 text-white shadow-card'
+                  : 'text-surface-600 hover:text-blue-600 hover:bg-surface-50'
               }`}
+
 
             >
               <ApperIcon name={tab.icon} className="w-4 h-4 sm:w-5 sm:h-5" />
