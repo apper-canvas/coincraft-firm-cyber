@@ -41,7 +41,22 @@ const Home = () => {
               <nav className="hidden md:flex space-x-6">
                 <Link to="/" className="text-surface-600 hover:text-primary-600 font-medium transition-colors">Dashboard</Link>
                 <Link to="/portfolio" className="text-surface-600 hover:text-primary-600 font-medium transition-colors">Portfolio</Link>
-                <a href="#analytics" className="text-surface-600 hover:text-primary-600 font-medium transition-colors">Analytics</a>
+                <button 
+                  onClick={() => {
+                    const analyticsSection = document.querySelector('.analytics-section');
+                    if (analyticsSection) {
+                      analyticsSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    // Also switch to analytics tab if MainFeature is available
+                    const analyticsTab = document.querySelector('[data-tab="analytics"]');
+                    if (analyticsTab) {
+                      analyticsTab.click();
+                    }
+                  }}
+                  className="text-surface-600 hover:text-primary-600 font-medium transition-colors"
+                >
+                  Analytics
+                </button>
                 <a href="#goals" className="text-surface-600 hover:text-primary-600 font-medium transition-colors">Goals</a>
               </nav>
 

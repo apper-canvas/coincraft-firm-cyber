@@ -37,13 +37,12 @@ const MainFeature = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
+              data-tab={tab.id}
               className={`flex items-center space-x-2 px-4 sm:px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                 activeTab === tab.id
                   ? 'bg-blue-600 text-white shadow-card'
                   : 'text-surface-600 hover:text-blue-600 hover:bg-surface-50'
               }`}
-
-
             >
               <ApperIcon name={tab.icon} className="w-4 h-4 sm:w-5 sm:h-5" />
               <span className="text-sm sm:text-base">{tab.label}</span>
@@ -52,24 +51,26 @@ const MainFeature = () => {
         </div>
       </div>
 
-      <AnimatePresence mode="wait">
-        {activeTab === 'transactions' && (
-          <TransactionsTab 
-            transactions={transactions}
-            setTransactions={setTransactions}
-            budgets={budgets}
-            setBudgets={setBudgets}
-          />
-        )}
-        
-        {activeTab === 'budgets' && (
-          <BudgetsTab budgets={budgets} />
-        )}
-        
-        {activeTab === 'analytics' && (
-          <AnalyticsTab transactions={transactions} budgets={budgets} />
-        )}
-      </AnimatePresence>
+      <div className={activeTab === 'analytics' ? 'analytics-section' : ''}>
+        <AnimatePresence mode="wait">
+          {activeTab === 'transactions' && (
+            <TransactionsTab 
+              transactions={transactions}
+              setTransactions={setTransactions}
+              budgets={budgets}
+              setBudgets={setBudgets}
+            />
+          )}
+          
+          {activeTab === 'budgets' && (
+            <BudgetsTab budgets={budgets} />
+          )}
+          
+          {activeTab === 'analytics' && (
+            <AnalyticsTab transactions={transactions} budgets={budgets} />
+          )}
+        </AnimatePresence>
+      </div>
     </section>
   )
 }
