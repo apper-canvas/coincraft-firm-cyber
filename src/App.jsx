@@ -2,6 +2,8 @@ import { Routes, Route } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Home from './pages/Home'
+import Goals from './pages/Goals'
+
 import InvestmentPortfolio from './pages/InvestmentPortfolio'
 
 import NotFound from './pages/NotFound'
@@ -12,6 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<InvestmentPortfolio />} />
+        <Route path="/goals" element={<Goals />} />
+
 
         <Route path="*" element={<NotFound />} />
       </Routes>

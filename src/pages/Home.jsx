@@ -57,7 +57,23 @@ const Home = () => {
                 >
                   Analytics
                 </button>
-                <a href="#goals" className="text-surface-600 hover:text-primary-600 font-medium transition-colors">Goals</a>
+                <button 
+                  onClick={() => {
+                    const goalsSection = document.querySelector('.goals-section');
+                    if (goalsSection) {
+                      goalsSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    // Also switch to goals tab if MainFeature is available
+                    const goalsTab = document.querySelector('[data-tab="goals"]');
+                    if (goalsTab) {
+                      goalsTab.click();
+                    }
+                  }}
+                  className="text-surface-600 hover:text-primary-600 font-medium transition-colors"
+                >
+                  Goals
+                </button>
+
               </nav>
 
 
